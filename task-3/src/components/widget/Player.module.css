@@ -1,0 +1,21 @@
+.container {
+  height: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left img,
+.right img {
+  height: 64px;
+  cursor: pointer;
+}
+
+.middle {
+  height: 320px;
+}
+.middle img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}

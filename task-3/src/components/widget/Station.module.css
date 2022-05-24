@@ -1,0 +1,18 @@
+.container {
+  padding: 45px 0;
+}
+.stationDetails {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.stationName span {
+  color: #a2abbd;
+  font-size: 44px;
+  font-weight: 400;
+}
+.stationFrequency span {
+  color: #a2abbd;
+  font-size: 44px;
+  font-weight: 700;
+}

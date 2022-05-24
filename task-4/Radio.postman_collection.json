@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "c4fec2e5-4db4-4208-b4e7-d1e88affc143",
+		"name": "Radio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQzMjMxM2Q1ZDQ1ZTU0ZDMwYmY0ZSIsImlhdCI6MTY1MzQyMDkwNCwiZXhwIjoxNjUzNDI0NTA0fQ.7eJlFgqDAX-Ss-L_SqqQu0Roo91WnQbjj7cLZMrciik",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Station",
+			"item": [
+				{
+					"name": "Create Station",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stationName\" : \"Test FM\",\r\n    \"stationFrequency\": \"100.2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all stations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Station By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/628d4d00e07b3fb880849a71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"628d4d00e07b3fb880849a71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Station",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stationFrequency\" : \"100.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations/628d4d00e07b3fb880849a71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"628d4d00e07b3fb880849a71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Station",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGQ0YzRlMjNhN2EwNDAyMDgyOThhOCIsImlhdCI6MTY1MzQyNzMzOCwiZXhwIjoxNjUzNDMwOTM4fQ.x1dx8GecfltcL4HpVS9uGdyFyPNSNrCpZH5gLtK1bTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/628d4d00e07b3fb880849a71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"628d4d00e07b3fb880849a71"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWVkNDNlNWE3N2EzNTI5ZTg0ODk2YyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDMwNDE4NjgsImV4cCI6MTY0MzA0NTQ2OH0.oTSsfDuZaMqqp-SzQBY8crl7for0n6wL11-tY8T4en4",
+				"type": "string"
+			}
+		]
+	}
+}

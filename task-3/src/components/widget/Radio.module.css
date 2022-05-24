@@ -1,0 +1,42 @@
+.container {
+  width: 1000px;
+  background-color: #30303b;
+  border-radius: 44px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  width: 100%;
+  background-color: #edae61;
+  height: 160px;
+  border-radius: 44px 44px 0 0;
+  display: flex;
+}
+.leftHeader {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 20%;
+}
+.middleHeader {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 56%;
+}
+.middleHeader h3 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 700;
+}
+.leftHeader img,
+.rightHeader img {
+  height: 48px;
+  cursor: pointer;
+}
+.rightHeader {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 20%;
+}
